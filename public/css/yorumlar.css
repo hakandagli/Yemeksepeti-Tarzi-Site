@@ -1,0 +1,85 @@
+#yorumlar{
+    padding-top:100px;
+    padding-bottom:20px;
+    display: flex;
+    justify-content: center;
+    min-height: 650px;
+    
+}
+
+#yorum-cont{
+    width: 80%;
+}
+
+#yorum-header{
+    font-size:30px;
+    color:#ab0012;
+    padding-bottom: 20px;
+}
+
+#yorumlar li:nth-child(odd){
+    padding:15px;
+    background-color: #e5e5e5;
+    border-left:5px solid #ab0012;
+    border-bottom: 1px solid black;
+}
+
+#yorumlar li:nth-child(even){
+    padding:15px;
+    background-color: rgb(240,242,245);
+    border-left:5px solid yellow;
+    border-bottom: 1px solid black;
+}
+
+.deneme{
+    display: flex;
+    justify-content:space-between;
+    padding-top:5px;
+    color:#ab0012;
+}
+#yorumlar a{
+    color:black;
+}
+
+.yorum-puan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yorum-sil-düzenle{
+    display: flex;
+    justify-content: flex-end;
+}
+.yorum-sil-düzenle a{
+    margin-right:15px;
+}
+
+textarea{
+    display: inline-block;
+    min-width:100%;
+    max-width:100%;
+    min-height:90px;
+    max-height: 90px;
+    border-bottom:5px solid #ab0012;
+    padding-left:15px;
+    padding-top:5px;
+    font-size:20px;
+}
+
+textarea:focus{
+    border:5px solid #ab0012;
+}
+
+input[type="submit"]{
+    padding:10px;
+}
+
+input[type="number"]{
+    display: inline-block;
+    font-size: 25px; 
+}
+
+.display-none{
+    display: none;
+}

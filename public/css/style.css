@@ -1,0 +1,136 @@
+    /* Genel Arayüz İçin geçerli*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    font-size:10px;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size:1.6rem;
+    background-color:#fff;
+    
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+ul{
+    list-style-type:none;
+}
+
+
+/*Navigation Bar Css Kodları */
+#containerNav{
+    width:100%;
+    background-color:#ab0012;
+    color:#fff;
+    padding-top:2.5rem;
+    padding-bottom:2.5rem;
+    position:fixed;
+}
+
+nav{
+    width:80%;
+    margin-right:auto;
+    margin-left:auto;
+    padding-right:0.5rem;
+    padding-left:0.5rem;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    display:flex;
+    flex-direction: row;
+}
+
+nav ul li a{
+    padding:1rem;
+    font-size:2rem;
+}
+
+nav ul li a:hover{
+    border-radius: 5px;
+    color:yellow;
+}
+
+
+
+#logo-box a{
+    color:#fff;
+    font-weight: 700;
+    font-size:2.5rem;
+}
+
+#logo-box a:hover{
+    color:yellow;
+}
+
+
+/*Footer Css*/
+footer{
+    background-color:yellow;
+    color:black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-paragraflar{
+    color:#ab0012;
+}
+
+#social ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-social {
+    display: inline-block;
+    margin:1rem 0.3rem;
+    width: 5rem;
+    height: 5rem;
+
+    font-weight: 400;
+    color: #ab0012;
+    font-size: 2rem;
+    line-height: 2rem;
+    
+    border: 2px solid #ab0012;
+    border-radius: 50%;
+    
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn-social:hover {
+    color: yellow;
+    background-color: #ab0012;
+}
+
+#copyright{
+    background-color:#ab0012;
+    color:white;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#sizeOzel{
+    padding-top:84px; /*Yukarıda navbar var ve navbar pozisyon özelliği fixed  olduğu için içerik navbarın içinden başlıyor ve gözükmüyor o yüzden padding-top vermeyi unutmayın*/
+    height:800px;
+}
+
+

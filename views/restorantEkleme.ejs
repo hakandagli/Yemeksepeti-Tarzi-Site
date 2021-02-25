@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restorant Ekleme</title>
+</head>
+<body>
+    <h1>Restorant Ekleme</h1>
+    <form action="/restorantEkleme" method ="POST">
+        <label for="ad">Ad</label>
+        <input type="text" id="ad" name="ad" placeholder="restoran adi giriniz" ><br>
+        <label for="kategori">Kategori</label>
+        <input type="text" id="kategori" name="kategori" placeholder="Kategori giriniz" ><br>
+        <label for="puan">Puan</label>
+        <input type="number" id="puan" name="puan" min="0" max ="10" step="1" placeholder="puan giriniz" ><br>
+        <input type="submit" value="kayıt">
+    </form>
+    <br>
+    <hr>
+    <hr>
+    <h1>Kullanici Ekleme</h1>
+    <form action="/kullaniciEkleme" method ="POST">
+        <label for="nickname">nickname</label>
+        <input type="text" id="nickname" name="nickname" placeholder="nickname giriniz" ><br>
+        <input type="submit" value="kayıt">
+    </form>
+    <br>
+    <hr>
+    <hr>
+    <h1>Kullanici Giris</h1>
+    <form action="/kullaniciGiris" method ="POST">
+        <label for="nickname">nickname</label>
+        <input type="text" id="nickname" name="nickname" placeholder="nickname giriniz" ><br>
+        <input type="submit" value="Giris">
+    </form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Google-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Font Awesome (Simgeler) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <!--Css-->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    <link rel="stylesheet" href="/static/css/restorantList.css">
+    
+    <title>Restoranlar</title>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <div id="containerNav">
+        <nav>
+            <div id="logo-box">
+                <a href="#"><i class="fas fa-hamburger"></i> Yemek Sitesi</a>
+            </div>
+
+            <div id="nav-links">
+                <ul>
+                    <li> <a href="">Giriş/Kayıt</a></li>
+                    <li> <a href="">Restorantlar</a></li>
+                    <li> <a href="">Ivır</a></li>
+                    <li> <a href="">Zıvır</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <!--Restoran Kısmı-->
+
+    <section id="restoranlar">
+        <div id="restoran-cont">
+            <div id="restoran-header">
+                <p>Restorantlar</p>
+            </div>
+            <div id="restoran-list" class="click-list">
+                <ul>
+                    <%for(var i=0;i<restorants.length;i++){%>
+                        
+                    
+                    <li>
+                        <button class="restoran-buton" id="hakan"><%=restorants[i].ad%>(<%=restorants[i].puan%>)-<%=restorants[i].kategori%>
+                            <div class="btn-aciklama display-none">
+                                <a href="">Siparis Ver</a>
+                                <a href="/yorumlar/<%=restorants[i].id%>">Yorumlar</a>
+                            </div>
+                        </button> 
+                    </li>
+
+                   
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!--Footer Kısmı-->
+    <footer>
+        <div id="footer-paragrafı">
+            <p class="footer-paragraflar">Görüş ve sorularınız için <b>info@yemeksitesi.com</b> adresine email
+                gönderebilirsiniz.</p>
+        </div>
+
+        <div id="social">
+            <ul>
+                <li>
+                    <button class="btn-social">
+                        <i class="fab fa-fw fa-facebook-f"></i>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btn-social">
+                        <i class="fab fa-fw fa-google-plus-g"></i>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btn-social">
+                        <i class="fab fa-fw fa-twitter"></i>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btn-social">
+                        <i class="fab fa-instagram"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <div id="copyright">
+        <div class="copyright-apropos">
+            <!--<small>Bu Web Sitesi APROPOS tarafından yapılmıştır. Hiçbir hakkı saklı değildir</small>-->
+            <small>Copyright © 2020</small>
+        </div>
+    </div>
+    <script>
+        //Restoran Aciklama JS
+        var restoranList = document.querySelector("#restoran-list");
+        EventListener();
+
+        function EventListener() {
+            restoranList.addEventListener("click", todoDeneme);
+        }
+        
+        function todoDeneme(e) {
+
+            if (e.target.className === "restoran-buton") {
+                e.target.children[0].classList.toggle('display-none');
+            }
+
+            else if (e.target.className === "btn-aciklama") {
+                e.target.classList.toggle("display-none");
+            }
+
+        }
+    </script>
+</body>
+
+</html>

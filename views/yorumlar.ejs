@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Google-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Font Awesome (Simgeler) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <!--Css-->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/yorumlar.css">
+    
+     <title>Yorumlar</title>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <div id="containerNav">
+        <nav>
+            <div id="logo-box">
+                <a href="#"><i class="fas fa-hamburger"></i> Yemek Sitesi</a>
+            </div>
+
+            <div id="nav-links">
+                <ul>
+                    <li> <a href="">Giriş/Kayıt</a></li>
+                    <li> <a href="">Restorantlar</a></li>
+                    <li> <a href="">Ivır</a></li>
+                    <li> <a href="">Zıvır</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <!--Yorum Kısmı-->
+
+    <section id="yorumlar">
+        <div id="yorum-cont">
+            <div id="yorum-header">
+                <p>  <%=restorantadi%>  </p>
+                
+            </div>
+            <div id="yorum-list" class="">
+                <ul>
+                   
+                    <%for(var i=0;i<yorumlar.length;i++){%>
+                        <%if(yorumlar[i].restoranId===restorantid){%>
+                    <li><div class="yorum"><%=yorumlar[i].yorum%>
+                            <div class="deneme">
+                                <div><%=yorumlar[i].yorumYapan%> Puan: <%=yorumlar[i].puan%> </div>
+                                <%if(yorumlar[i].yorumYapan==="Kullanıcı2"){%>
+                                <div class="yorum-sil-düzenle"> <b> <a href="/yorumDuzenle/<%=yorumlar[i].id%>">düzenle</a> <a href="/yorumSil/<%=yorumlar[i].id%>">sil</a></b> </div>
+                                <%}%>   
+                            </div>
+                        </div>
+                    </li>
+                        <%}%>
+                    <%}%>
+                
+                </ul>
+            </div>
+
+            
+            <div id="yorum-form">
+                <form action="/yorumEkle" method="POST">
+                    <input type="text" value="<%=restorantid%>" name="restoranId" id="restoranId"class="display-none">
+                    <input type="text" value="Kullanıcı2" name="yorumYapan" id="yorumYapan"class="display-none">
+                    <textarea name="yorum" id="yorum" cols="30" rows="10" required></textarea>
+                    <div class="yorum-puan">
+                    <label for="puan">Puan </label>
+                    <input type="number" id="puan" name="puan" min="0" max ="10" step="1" value="7" ><br>
+                    <input type="submit" value="Yorum Ekle">
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!--Footer Kısmı-->
+    <footer>
+        <div id="footer-paragrafı">
+            <p class="footer-paragraflar">Görüş ve sorularınız için <b>info@yemeksitesi.com</b> adresine email
+                gönderebilirsiniz.</p>
+        </div>
+
+        <div id="social">
+            <ul>
+                <li>
+                    <button class="btn-social">
+                        <i class="fab fa-fw fa-facebook-f"></i>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btn-social">
+                        <i class="fab fa-fw fa-google-plus-g"></i>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btn-social">
+                        <i class="fab fa-fw fa-twitter"></i>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btn-social">
+                        <i class="fab fa-instagram"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <div id="copyright">
+        <div class="copyright-apropos">
+            <!--<small>Bu Web Sitesi APROPOS tarafından yapılmıştır. Hiçbir hakkı saklı değildir</small>-->
+            <small>Copyright © 2020</small>
+        </div>
+    </div>
+    
+   
+</body>
+
+</html>

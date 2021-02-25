@@ -1,0 +1,25 @@
+{
+  "name": "apropos",
+  "version": "1.0.0",
+  "description": "yazilim_muhendisligi",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ayula@bitbucket.org/asimsinanyuksel/apropos.git"
+  },
+  "author": "apropos",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/asimsinanyuksel/apropos#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.16",
+    "vue": "^2.6.11"
+  }
+}

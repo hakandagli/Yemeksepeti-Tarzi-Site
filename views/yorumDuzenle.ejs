@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yorum Duzenle</title> 
+</head>
+<body>
+    <form action="/yorumDuzenleKaydet/<%=yorums.id%>" method ="POST">
+    <textarea name="yorum" id="yorum" cols="30" rows="10"><%=yorums.yorum%></textarea>
+    <input type="submit" value="kaydet">
+    </form>
+</body>
+</html>
